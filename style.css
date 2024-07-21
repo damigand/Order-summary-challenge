@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+    --pale-blue: rgb(224, 232, 255);
+    --bright-blue: rgb(56, 41, 224);
+
+    --hover: rgb(110, 98, 237);
+
+    --white: hsl(0, 0%, 100%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --font-title: 900 28px "Red Hat Display", sans;
+    --font-info: 500 16px/150% "Red Hat Display", sans;
+    --font-plan-title: 900 16px "Red Hat Display", sans;
+    --font-plan-price: 500 16px "Red Hat Display", sans;
+    --font-buttons: 700 16px "Red Hat Display", sans;
+
+    --spacing-48: 48px;
+    --spacing-24: 24px;
+    --spacing-20: 20px;
+    --spacing-16: 16px;
+    --spacing-12: 12px;
+    --spacing-8: 8px;
+    --spacing-4: 4px;
+}
+
+* {
+    font-family: "Red Hat Display", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--pale-blue);
+}
+
+body {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.card {
+    text-align: center;
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    max-height: 700px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--spacing-20);
+    padding: var(--spacing-48);
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+}
+
+.card-text h1 {
+    font: var(--font-title);
+    color: var(--dark-blue);
+}
+
+.card-text p {
+    font: var(--font-info);
+    color: var(--desaturated-blue);
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--very-pale-blue);
+    padding: var(--spacing-24);
+    border-radius: 12px;
+}
+
+.plan-info {
+    display: flex;
+    gap: var(--spacing-20);
+}
+
+.plan-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.plan-text h3 {
+    font: var(--font-plan-title);
+}
+
+.plan-text span {
+    font: var(--font-plan-price);
+    color: var(--desaturated-blue);
+}
+
+.change {
+    color: var(--bright-blue);
+    font: var(--font-plan-title);
+}
+
+.change:hover {
+    color: var(--hover);
+    text-decoration: none;
+}
+
+.buy,
+.cancel {
+    font: var(--font-buttons);
+}
+
+.buy {
+    margin-top: var(--spacing-12);
+    width: 100%;
+    color: var(--white);
+    background-color: var(--bright-blue);
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 20px 25px 5px rgba(56, 41, 224, 0.15);
+}
+
+.buy:hover {
+    background-color: var(--hover);
+}
+
+.cancel {
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    margin-top: var(--spacing-12);
+}
+
+.cancel:hover {
+    color: black;
+}
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+    .card-content {
+        padding-left: var(--spacing-24);
+        padding-right: var(--spacing-24);
+    }
+
+    .plan {
+        padding-left: var(--spacing-12);
+        padding-right: var(--spacing-12);
+    }
+}
